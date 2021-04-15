@@ -1,4 +1,4 @@
-FROM 3-alpine AS base
+FROM python:3-alpine AS base
 
 LABEL maintainer="Chua Jie Sheng <hello@jschua.com>"
 
