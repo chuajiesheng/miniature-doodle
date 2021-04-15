@@ -1,0 +1,5 @@
+importlib-resources
+pandas
+pytest
+coverage
+Faker
