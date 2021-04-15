@@ -4,6 +4,8 @@ LABEL maintainer="Chua Jie Sheng <hello@jschua.com>"
 
 RUN apk add --no-cache python3-dev gcc libc-dev libressl-dev musl-dev libffi-dev
 RUN pip3 install --upgrade pip
-RUN CRYPTOGRAPHY_DONT_BUILD_RUST=1 pip3 install -r requirements.txt
+
+COPY requirements.txt /tmp/requirements.txt
+RUN CRYPTOGRAPHY_DONT_BUILD_RUST=1 pip3 install -r /tmp/requirements.txt
 
 CMD ["python3"]
