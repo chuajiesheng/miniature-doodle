@@ -6,4 +6,3 @@ coverage
 Faker
 twine
 mypy
-pyarrow
