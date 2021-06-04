@@ -12,6 +12,8 @@ RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-k
 RUN apt-get update
 RUN apt-get -y upgrade
 RUN apt-get install -y python3 python3-pip python3-dev python3-venv gcc libffi-dev openjdk-11-jdk postgresql-client-13 musl-dev
+
+RUN pushd /usr/bin && ln -s python3.8 python && popd
 RUN python3 -m pip install --upgrade pip
 
 COPY requirements.txt /tmp/requirements.txt
