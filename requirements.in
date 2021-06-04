@@ -6,3 +6,8 @@ coverage
 Faker
 twine
 mypy
+pyarrow
+pyspark
+sqlalchemy
+psycopg2-binary
+marshmallow
